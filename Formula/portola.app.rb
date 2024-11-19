@@ -5,11 +5,11 @@
 class PortolaApp < Formula
   desc ""
   homepage "https://github.com/nomad10101/portola"
-  version "0.4.15"
+  version "0.4.16"
   depends_on :macos
 
-  url "https://github.com/portolanetwork/portola-release/releases/download/v0.4.15/portola_Darwin_x86_64.tar.gz"
-  sha256 "85687657474ce147c6158e092a5b9d94921a4078d215e0d2dbef62745cc63b21"
+  url "https://github.com/portolanetwork/portola-release/releases/download/v0.4.16/portola_Darwin_x86_64.tar.gz"
+  sha256 "7459948c5fd5560bb6af096d3a46d15f1ad4177feee360687d04d367a24b8c36"
 
   def install
     bin.install "portd"
@@ -40,8 +40,8 @@ class PortolaApp < Formula
     run [opt_bin/"portd", "service", "start"]
     environment_variables BREW_OPT_HOME: opt_prefix
     keep_alive true
-    log_path "#{var}/log/portd/portd.out.log"
-    error_log_path "#{var}/log/portd/portd.err.log"
+    log_path "#{var}/log/portola.app/portd.out.log"
+    error_log_path "#{var}/log/portola.app/portd.err.log"
     process_type :interactive
     working_dir opt_prefix
   end
