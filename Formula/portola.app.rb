@@ -5,11 +5,11 @@
 class PortolaApp < Formula
   desc ""
   homepage "https://github.com/nomad10101/portola"
-  version "0.4.10"
+  version "0.4.14"
   depends_on :macos
 
-  url "https://github.com/portolanetwork/portola-release/releases/download/v0.4.10/portola.app_Darwin_x86_64.tar.gz"
-  sha256 "51906eba0859daff34fa4d9ad5bc894fd788fc432552229fa868357bfae480c1"
+  url "https://github.com/portolanetwork/portola-release/releases/download/v0.4.14/portola_Darwin_x86_64.tar.gz"
+  sha256 "a5dd0e5067dc6149f339f671d21376d49bd2995ded4a932580d497a95d70407c"
 
   def install
     bin.install "portd"
