@@ -5,17 +5,17 @@
 class PortolaApp < Formula
   desc ""
   homepage "https://github.com/nomad10101/portola"
-  version "0.4.14"
+  version "0.4.15"
   depends_on :macos
 
-  url "https://github.com/portolanetwork/portola-release/releases/download/v0.4.14/portola_Darwin_x86_64.tar.gz"
-  sha256 "a5dd0e5067dc6149f339f671d21376d49bd2995ded4a932580d497a95d70407c"
+  url "https://github.com/portolanetwork/portola-release/releases/download/v0.4.15/portola_Darwin_x86_64.tar.gz"
+  sha256 "85687657474ce147c6158e092a5b9d94921a4078d215e0d2dbef62745cc63b21"
 
   def install
     bin.install "portd"
     bin.install "portctl"
-    prefix.install Dir["cmd/portd/config/ci/resources"]
-    prefix.install "cmd/portd/config/ci/deployment.yaml"
+    prefix.install Dir["cmd/portd/config/prod-usw1/resources"]
+    prefix.install "cmd/portd/config/prod-usw1/deployment.yaml"
   end
 
   on_arm do
