@@ -5,11 +5,11 @@
 class PortolaApp < Formula
   desc ""
   homepage "https://github.com/nomad10101/portola"
-  version "0.4.33"
+  version "0.6.21"
   depends_on :macos
 
-  url "https://github.com/portolanetwork/portola-release/releases/download/v0.4.33/portola_Darwin_x86_64.tar.gz"
-  sha256 "c53e9fffbff74a3242fff59835ead818e116d27de5e151372d6fc8173aa61d0f"
+  url "https://github.com/portolanetwork/portola-release/releases/download/v0.6.21/portola_Darwin_x86_64.tar.gz"
+  sha256 "9a5669f12b05158792a28c2df7e00cdd7d0280a622b4a528312493c41913a723"
 
   def install
     bin.install "portd"
@@ -18,7 +18,7 @@ class PortolaApp < Formula
     prefix.install "cmd/portd/config/prod-usw1/deployment.yaml"
   end
 
-  on_arm do
+  if Hardware::CPU.arm?
     def caveats
       <<~EOS
         The darwin_arm64 architecture is not supported for the PortolaApp
