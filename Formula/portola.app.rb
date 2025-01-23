@@ -5,12 +5,12 @@
 class PortolaApp < Formula
   desc ""
   homepage "https://github.com/portolanetwork/portola"
-  version "0.6.26"
+  version "0.6.29"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/portolanetwork/portola-release/releases/download/v0.6.26/portola_Darwin_x86_64.tar.gz"
-    sha256 "7c523b02620558403642c921f308732294df5eadde30d4b92e9f0970f2842719"
+    url "https://github.com/portolanetwork/portola-release/releases/download/v0.6.29/portola_Darwin_x86_64.tar.gz"
+    sha256 "15aa4acce725c75a40a0b1cfb389dd045d86d97e8cb591d3f25843f1dcf0592d"
 
     def install
       bin.install "portd"
@@ -20,8 +20,8 @@ class PortolaApp < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/portolanetwork/portola-release/releases/download/v0.6.26/portola_Darwin_arm64.tar.gz"
-    sha256 "7ed33ee7798b773db0f49b44180056c04b3693a1549384a719771e84a5f26a7b"
+    url "https://github.com/portolanetwork/portola-release/releases/download/v0.6.29/portola_Darwin_arm64.tar.gz"
+    sha256 "527cd98581fec60346b1c5bbcf0b87ca23ddb837bdfe84d15b2b04830ad91463"
 
     def install
       bin.install "portd"
