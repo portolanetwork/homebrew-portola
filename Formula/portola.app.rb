@@ -5,12 +5,12 @@
 class PortolaApp < Formula
   desc ""
   homepage "https://github.com/portolanetwork/portola"
-  version "0.7.5"
+  version "0.7.29"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/portolanetwork/portola-release/releases/download/v0.7.5/portola_Darwin_x86_64.tar.gz"
-    sha256 "0fbd3e99d834aa950b0be9a4ca69f4811d9b06c6a3cf14a740c16926dbd88355"
+    url "https://github.com/portolanetwork/portola-release/releases/download/v0.7.29/portola_Darwin_x86_64.tar.gz"
+    sha256 "eab0444a13aa442ca26134af828b2a47fc6de01f96ba3be8bc9ca6698f9aacc6"
 
     def install
       bin.install "portd"
@@ -20,8 +20,8 @@ class PortolaApp < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/portolanetwork/portola-release/releases/download/v0.7.5/portola_Darwin_arm64.tar.gz"
-    sha256 "9f2cd2795ccbdea261ed37ad30b94e7221235e6fe252e5d0b0757c86bcc73e02"
+    url "https://github.com/portolanetwork/portola-release/releases/download/v0.7.29/portola_Darwin_arm64.tar.gz"
+    sha256 "3539107335f4760cbedd0a6cac883e96b96949337977e9a8e6fe85fa781e2562"
 
     def install
       bin.install "portd"
@@ -43,7 +43,6 @@ class PortolaApp < Formula
   service do
     run [opt_bin/"portd", "service", "start"]
     environment_variables(
-      "BREW_APP_FORMULA_NAME" => "portola.app",
       "BREW_APP_BIN_PATH" => "#{bin}",
       "BREW_APP_OPT_HOME" => "#{opt_prefix}",
       "BREW_PREFIX" => "#{HOMEBREW_PREFIX}"
