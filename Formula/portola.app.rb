@@ -5,12 +5,12 @@
 class PortolaApp < Formula
   desc ""
   homepage "https://github.com/portolanetwork/portola"
-  version "0.7.29"
+  version "0.7.114"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/portolanetwork/portola-release/releases/download/v0.7.29/portola_Darwin_x86_64.tar.gz"
-    sha256 "eab0444a13aa442ca26134af828b2a47fc6de01f96ba3be8bc9ca6698f9aacc6"
+    url "https://github.com/portolanetwork/portola-release/releases/download/v0.7.114/portola_Darwin_x86_64.tar.gz"
+    sha256 "7a7abc78f872ea6c42e7996c57595e5b80dc4262661a63f5ae7716b49b3668d7"
 
     def install
       bin.install "portd"
@@ -20,8 +20,8 @@ class PortolaApp < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/portolanetwork/portola-release/releases/download/v0.7.29/portola_Darwin_arm64.tar.gz"
-    sha256 "3539107335f4760cbedd0a6cac883e96b96949337977e9a8e6fe85fa781e2562"
+    url "https://github.com/portolanetwork/portola-release/releases/download/v0.7.114/portola_Darwin_arm64.tar.gz"
+    sha256 "9c8d9d2b037f970b966072ac02459c39fa7394112241d5d3367207f55cdc7fa7"
 
     def install
       bin.install "portd"
@@ -48,7 +48,6 @@ class PortolaApp < Formula
       "BREW_PREFIX" => "#{HOMEBREW_PREFIX}"
     )
     keep_alive true
-    log_path "#{var}/log/portola.app/portd.out.log"
     error_log_path "#{var}/log/portola.app/portd.err.log"
     process_type :interactive
     working_dir opt_prefix
