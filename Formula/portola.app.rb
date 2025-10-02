@@ -5,12 +5,12 @@
 class PortolaApp < Formula
   desc ""
   homepage "https://github.com/portolanetwork/portola"
-  version "0.7.114"
+  version "0.8.48"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/portolanetwork/portola-release/releases/download/v0.7.114/portola_Darwin_x86_64.tar.gz"
-    sha256 "7a7abc78f872ea6c42e7996c57595e5b80dc4262661a63f5ae7716b49b3668d7"
+    url "https://github.com/portolanetwork/portola-release/releases/download/v0.8.48/Portola_Darwin_x86_64.tar.gz"
+    sha256 "c3cce1dab4831449455a3fb8cae68d424baf0f746f2f0d2a32c30d422c290a99"
 
     def install
       bin.install "portd"
@@ -20,8 +20,8 @@ class PortolaApp < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/portolanetwork/portola-release/releases/download/v0.7.114/portola_Darwin_arm64.tar.gz"
-    sha256 "9c8d9d2b037f970b966072ac02459c39fa7394112241d5d3367207f55cdc7fa7"
+    url "https://github.com/portolanetwork/portola-release/releases/download/v0.8.48/Portola_Darwin_arm64.tar.gz"
+    sha256 "55056b5ce4bad2f63f0443801b1ea598e4dcfd8f8b2b1c01e1c363ec7246130d"
 
     def install
       bin.install "portd"
@@ -34,7 +34,7 @@ class PortolaApp < Formula
   def caveats
     <<~EOS
       ****************************************************************
-      Installed Portola Staging Formula. To start the service run:
+      Installed Portola Formula. To start the service run:
         brew services start portola.app
       ****************************************************************
     EOS
